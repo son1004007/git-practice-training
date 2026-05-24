@@ -58,6 +58,8 @@ git config --global core.autocrlf true
 git config --global --list
 ```
 
+![Git 최초 설정 및 설정 확인 화면](../assets/images/01_gitbash_install/02_gitbash_config.png)
+
 ---
 
 ## 완료 기준
