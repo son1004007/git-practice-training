@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#f6f8fa"/>
+  <rect x="70" y="60" width="760" height="300" rx="12" fill="#111827"/>
+  <rect x="70" y="60" width="760" height="36" rx="12" fill="#374151"/>
+  <text x="90" y="84" fill="#ffffff" font-family="Arial" font-size="16">Git Bash</text>
+  <text x="95" y="145" fill="#d1d5db" font-family="Consolas, monospace" font-size="22">$ git --version</text>
+  <text x="95" y="190" fill="#22c55e" font-family="Consolas, monospace" font-size="22">git version 2.xx.x.windows.x</text>
+  <text x="95" y="260" fill="#e5e7eb" font-family="Arial" font-size="20">버전 정보가 표시되면 Git Bash 설치가 완료된 상태입니다.</text>
+</svg>
