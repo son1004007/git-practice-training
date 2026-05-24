@@ -1,4 +1,4 @@
-# 03. GitHub 개인 레포 생성
+﻿# 03. GitHub 개인 레포 생성
 
 ## 1. 목적
 
@@ -13,6 +13,7 @@
 3. Repository name을 입력합니다.
 4. 공개 범위를 선택합니다.
 5. Create repository를 선택합니다.
+   ![GitHub 저장소 목록](../assets/images/03_github_repo/01_github_repository_list.png)
 
 ---
 
@@ -28,13 +29,13 @@ git-practice-training
 git-practice-본인이름
 ```
 
----
+![GitHub 새 저장소 정보 입력](../assets/images/03_github_repo/05_github_new_repository_filled.png)
 
 ## 4. 공개 범위 선택 기준
 
-| 구분 | 기준 |
-|---|---|
-| Public | 교육용, 공개해도 되는 샘플 자료 |
+| 구분    | 기준                                   |
+| ------- | -------------------------------------- |
+| Public  | 교육용, 공개해도 되는 샘플 자료        |
 | Private | 업무 자료, 고객 자료, 비공개 분석 자료 |
 
 실무에서는 고객 데이터, 내부 문서, 분석 결과가 포함될 수 있으므로 기본적으로 Private을 권장합니다.
@@ -51,6 +52,10 @@ git-practice-본인이름
 https://github.com/계정명/저장소명.git
 ```
 
+```
+https://github.com/son1004007/git-practice-training1.git
+```
+
 ---
 
 ## 6. 로컬 PC로 가져오기
@@ -61,11 +66,15 @@ Git Bash 또는 VS Code에서 clone을 수행합니다.
 git clone 저장소주소
 ```
 
+![VS Code clone 저장소 주소 입력](../assets/images/03_github_repo/06_vscode_clone_repository_url.png)
+
 clone 후 생성된 폴더로 이동합니다.
 
 ```bash
 cd 저장소명
 ```
+
+![VS Code clone 저장소 열기](../assets/images/03_github_repo/07_vscode_open_cloned_repository.png)
 
 ---
 

@@ -1,4 +1,4 @@
-# 04. clone, commit, push 실습
+﻿# 04. clone, commit, push 실습
 
 ## 1. 목적
 
@@ -14,27 +14,13 @@ clone → 파일 수정 → status 확인 → add → commit → push → GitHub
 
 ---
 
-## 3. 저장소 clone
-
-GitHub 저장소 주소를 복사한 뒤 아래 명령어를 실행합니다.
-
-```bash
-git clone 저장소주소
-```
-
-clone 후 폴더로 이동합니다.
-
-```bash
-cd 저장소명
-```
-
----
-
 ## 4. 현재 상태 확인
 
 ```bash
 git status
 ```
+
+![Git status 변경사항 없음](../assets/images/04_commit_push/01_git_status_clean.png)
 
 아직 수정한 파일이 없다면 변경사항이 없다고 표시됩니다.
 
@@ -67,6 +53,7 @@ practice/memo/work_note.md
 git status
 ```
 
+![Git status 수정 파일 확인](../assets/images/04_commit_push/02_git_status_modified.png)
 수정된 파일이 표시되는지 확인합니다.
 
 ---
@@ -79,6 +66,7 @@ git status
 git add practice/memo/work_note.md
 ```
 
+![Git add 파일 스테이징](../assets/images/04_commit_push/03_git_add_file.png)
 전체 변경 파일을 stage하려면 아래 명령어를 사용할 수 있습니다.
 
 ```bash
@@ -97,6 +85,8 @@ git add .
 git commit -m "docs(memo): Git 실습 업무 메모 추가"
 ```
 
+![Git commit 실행 결과](../assets/images/04_commit_push/04_git_commit_result.png)
+
 ---
 
 ## 9. GitHub로 push
@@ -105,26 +95,15 @@ git commit -m "docs(memo): Git 실습 업무 메모 추가"
 git push origin main
 ```
 
+![Git push 실행 시작](../assets/images/04_commit_push/05_git_push_start.png)
+![Git push 완료 결과](../assets/images/04_commit_push/07_git_push_result.png)
+
 ---
 
 ## 10. GitHub에서 확인
 
 GitHub 저장소 화면에서 수정한 파일과 commit 이력이 반영되었는지 확인합니다.
-
----
-
-## 11. 실습 체크리스트
-
-| 항목 | 완료 |
-|---|---|
-| 저장소 clone |  |
-| 파일 수정 |  |
-| git status 확인 |  |
-| git add 수행 |  |
-| git commit 수행 |  |
-| git push 수행 |  |
-| GitHub 반영 확인 |  |
-
+![GitHub push 반영 확인](../assets/images/04_commit_push/08_github_push_confirm.png)
 ---
 
 ## 12. 자주 하는 실수

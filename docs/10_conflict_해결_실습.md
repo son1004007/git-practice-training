@@ -1,4 +1,4 @@
-# 10. Conflict 해결 실습
+﻿# 10. Conflict 해결 실습
 
 ## 1. 목적
 
@@ -57,6 +57,8 @@ branch A를 생성합니다.
 git switch -c docs/report-summary-a
 ```
 
+![conflict 실습 branch A 생성](../assets/images/10_conflict/01_git_create_branch_a.png)
+
 `practice/report/analysis_result.md` 파일의 결과 요약 부분을 수정합니다.
 
 예시:
@@ -67,6 +69,7 @@ git switch -c docs/report-summary-a
 - 날짜별 접속 건수를 기준으로 이용 현황을 확인했습니다.
 ```
 
+![branch A 파일 수정](../assets/images/10_conflict/02_edit_branch_a_file.png)
 commit합니다.
 
 ```bash
@@ -74,6 +77,7 @@ git add practice/report/analysis_result.md
 git commit -m "docs(report): 결과 요약 문구 수정 A"
 ```
 
+![branch A commit 결과](../assets/images/10_conflict/03_commit_branch_a.png)
 main에 반영합니다.
 
 ```bash
@@ -81,7 +85,7 @@ git switch main
 git merge docs/report-summary-a
 ```
 
----
+![branch A main merge 결과](../assets/images/10_conflict/05_merge_branch_a.png)
 
 ## 6. branch B 작업
 
@@ -91,6 +95,7 @@ branch B를 생성합니다.
 git switch -c docs/report-summary-b
 ```
 
+![conflict 실습 branch B 생성](../assets/images/10_conflict/06_create_branch_b.png)
 같은 파일의 같은 위치를 다르게 수정합니다.
 
 예시:
@@ -108,7 +113,7 @@ git add practice/report/analysis_result.md
 git commit -m "docs(report): 결과 요약 문구 수정 B"
 ```
 
----
+![branch B commit 결과](../assets/images/10_conflict/07_commit_branch_b.png)
 
 ## 7. conflict 발생시키기
 
@@ -124,6 +129,7 @@ branch B를 merge합니다.
 git merge docs/report-summary-b
 ```
 
+![merge conflict 발생 터미널](../assets/images/10_conflict/08_conflict_terminal.png)
 같은 파일 같은 위치가 서로 다르면 conflict가 발생합니다.
 
 ---
@@ -140,12 +146,13 @@ main 브랜치 내용
 >>>>>>> docs/report-summary-b
 ```
 
+![conflict 파일 표시](../assets/images/10_conflict/09_conflict_file_marker.png)
 의미:
 
-| 표시 | 의미 |
-|---|---|
-| HEAD | 현재 브랜치 내용 |
-| ======= | 변경 내용 구분선 |
+| 표시    | 의미                   |
+| ------- | ---------------------- |
+| HEAD    | 현재 브랜치 내용       |
+| ======= | 변경 내용 구분선       |
 | >>>>>>> | 병합하려는 브랜치 내용 |
 
 ---
@@ -168,6 +175,7 @@ main 브랜치 내용
 - `=======` 표시를 제거합니다.
 - `>>>>>>>` 표시를 제거합니다.
 - 최종 문장만 남깁니다.
+  ![conflict 해결 후 파일](../assets/images/10_conflict/11_conflict_resolved_file.png)
 
 ---
 
@@ -178,19 +186,20 @@ git status
 git add practice/report/analysis_result.md
 git commit -m "fix(conflict): 결과 요약 문구 충돌 해결"
 ```
-
+![conflict 해결 commit 결과](../assets/images/10_conflict/12_conflict_commit_result.png)
+![conflict 해결 후 clean status](../assets/images/10_conflict/13_conflict_resolved_clean_status.png)
 ---
 
 ## 11. VS Code에서 해결하는 방법
 
 VS Code는 conflict 발생 시 아래 버튼을 제공합니다.
 
-| 버튼 | 의미 |
-|---|---|
-| Accept Current Change | 현재 브랜치 내용 선택 |
+| 버튼                   | 의미                       |
+| ---------------------- | -------------------------- |
+| Accept Current Change  | 현재 브랜치 내용 선택      |
 | Accept Incoming Change | 병합 대상 브랜치 내용 선택 |
-| Accept Both Changes | 두 변경 내용 모두 반영 |
-| Compare Changes | 차이 비교 |
+| Accept Both Changes    | 두 변경 내용 모두 반영     |
+| Compare Changes        | 차이 비교                  |
 
 초급자는 버튼만 누르기보다 최종 파일 내용을 직접 확인해야 합니다.
 
@@ -198,12 +207,12 @@ VS Code는 conflict 발생 시 아래 버튼을 제공합니다.
 
 ## 12. 실무 대응 기준
 
-| 상황 | 대응 |
-|---|---|
-| 문서 문장 충돌 | 의미가 맞도록 최종 문장 재작성 |
-| SQL 조건 충돌 | 결과 수치 영향 확인 후 반영 |
-| Python 코드 충돌 | 실행 테스트 후 반영 |
-| 분석 기준 충돌 | 작성자 또는 담당자에게 기준 확인 |
+| 상황             | 대응                             |
+| ---------------- | -------------------------------- |
+| 문서 문장 충돌   | 의미가 맞도록 최종 문장 재작성   |
+| SQL 조건 충돌    | 결과 수치 영향 확인 후 반영      |
+| Python 코드 충돌 | 실행 테스트 후 반영              |
+| 분석 기준 충돌   | 작성자 또는 담당자에게 기준 확인 |
 
 ---
 

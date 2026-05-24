@@ -1,4 +1,4 @@
-# 05. Branch와 Pull Request 실습
+﻿# 05. Branch와 Pull Request 실습
 
 ## 1. 목적
 
@@ -25,7 +25,7 @@ git switch main
 git pull origin main
 ```
 
----
+![main 브랜치 최신화 완료](../assets/images/05_branch_pr/02_git_pull_main_complete.png)
 
 ## 4. 작업 브랜치 생성
 
@@ -38,7 +38,7 @@ git switch -c docs/update-work-note
 SQL 작업 예시:
 
 ```bash
-git switch -c feat/add-sql-example
+git switch -c feat/add-analysis-report
 ```
 
 오류 수정 예시:
@@ -47,17 +47,21 @@ git switch -c feat/add-sql-example
 git switch -c fix/report-calculation
 ```
 
+![작업 브랜치 생성](../assets/images/05_branch_pr/03_git_switch_branch.png)
+![브랜치 이름 선택](../assets/images/05_branch_pr/04_branch_name_select.png)
+![브랜치 이름 중복 오류](../assets/images/05_branch_pr/06_branch_name_duplicate_error.png)
+
 ---
 
 ## 5. 브랜치 이름 작성 기준
 
-| 구분 | 예시 | 사용 상황 |
-|---|---|---|
-| docs | docs/update-readme | 문서 수정 |
-| feat | feat/add-analysis-report | 새 분석 결과물 추가 |
-| fix | fix/sql-condition | 오류 수정 |
-| chore | chore/cleanup-files | 폴더 정리, 설정 정리 |
-| refactor | refactor/preprocess-code | 구조 개선 |
+| 구분     | 예시                     | 사용 상황            |
+| -------- | ------------------------ | -------------------- |
+| docs     | docs/update-readme       | 문서 수정            |
+| feat     | feat/add-analysis-report | 새 분석 결과물 추가  |
+| fix      | fix/sql-condition        | 오류 수정            |
+| chore    | chore/cleanup-files      | 폴더 정리, 설정 정리 |
+| refactor | refactor/preprocess-code | 구조 개선            |
 
 ---
 
@@ -85,6 +89,7 @@ git push origin docs/update-work-note
 ```
 
 처음 push하는 브랜치는 GitHub에 새 브랜치로 생성됩니다.
+![원격 브랜치 push](../assets/images/05_branch_pr/07_git_push_branch.png)
 
 ---
 
@@ -99,7 +104,7 @@ GitHub 저장소 화면에서 아래 순서로 진행합니다.
 5. 변경 파일 확인
 6. 문제가 없으면 merge
 
----
+![VS Code PR 생성 시작](../assets/images/05_branch_pr/08_vscode_pr_create_start.png)
 
 ## 9. Pull Request 제목 예시
 
@@ -110,6 +115,7 @@ fix(report): 지표 설명 오류 수정
 ```
 
 commit message와 유사하게 작성하면 이력 관리가 쉽습니다.
+![PR 제목 작성](../assets/images/05_branch_pr/09_vscode_pr_title.png)
 
 ---
 
@@ -128,6 +134,14 @@ commit message와 유사하게 작성하면 이력 관리가 쉽습니다.
 - [ ] commit message 규칙 확인
 ```
 
+![PR 본문 작성](../assets/images/05_branch_pr/10_vscode_pr_description.png)
+
+![GitHub PR 상세 화면](../assets/images/05_branch_pr/11_github_pr_detail.png)
+
+![GitHub PR merge 버튼](../assets/images/05_branch_pr/12_github_pr_merge_button.png)
+
+![GitHub PR merge 확인](../assets/images/05_branch_pr/13_github_pr_confirm_merge.png)
+
 ---
 
 ## 11. merge 후 로컬 main 최신화
@@ -139,13 +153,19 @@ git switch main
 git pull origin main
 ```
 
+![merge 후 main 브랜치 이동](../assets/images/05_branch_pr/15_git_switch_main_after_merge.png)
+
+![merge 후 git pull 실행](../assets/images/05_branch_pr/16_git_pull_after_merge.png)
+
+![merge 후 로컬 main 최신화 완료](../assets/images/05_branch_pr/17_git_pull_after_merge_complete.png)
 작업이 끝난 브랜치는 삭제할 수 있습니다.
 
 ```bash
 git branch -d docs/update-work-note
 ```
 
----
+![작업 브랜치 삭제](../assets/images/05_branch_pr/18_git_delete_branch.png)
+![작업 브랜치 삭제 완료](../assets/images/05_branch_pr/19_git_delete_branch_complete.png)
 
 ## 12. 실무 기준
 
@@ -156,18 +176,3 @@ git branch -d docs/update-work-note
 - 작업이 끝난 브랜치는 정리합니다.
 
 ---
-
-## 13. 완료 기준
-
-아래 작업을 완료하면 branch/PR 실습이 완료됩니다.
-
-| 항목 | 완료 |
-|---|---|
-| main 최신화 |  |
-| branch 생성 |  |
-| 파일 수정 |  |
-| commit 작성 |  |
-| branch push |  |
-| Pull Request 생성 |  |
-| merge |  |
-| 로컬 main 최신화 |  |
