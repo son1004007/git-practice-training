@@ -33,6 +33,8 @@ https://git-scm.com/install/windows
 git --version
 ```
 
+![Git 버전 확인](../assets/images/01_gitbash_install/01_gitbash_version.png)
+
 버전 정보가 표시되면 설치가 완료된 것입니다.
 
 ---
