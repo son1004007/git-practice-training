@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#f6f8fa"/>
+  <text x="60" y="55" fill="#111827" font-family="Arial" font-size="28" font-weight="bold">Conflict Resolution Flow</text>
+  <rect x="80" y="110" width="220" height="120" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="120" y="160" fill="#111827" font-family="Arial" font-size="20">현재 브랜치</text>
+  <text x="120" y="195" fill="#6b7280" font-family="Arial" font-size="18">내용 A</text>
+  <rect x="600" y="110" width="220" height="120" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="640" y="160" fill="#111827" font-family="Arial" font-size="20">병합 브랜치</text>
+  <text x="640" y="195" fill="#6b7280" font-family="Arial" font-size="18">내용 B</text>
+  <rect x="340" y="260" width="220" height="100" rx="12" fill="#ffffff" stroke="#22c55e" stroke-width="3"/>
+  <text x="387" y="305" fill="#111827" font-family="Arial" font-size="20">최종 내용 선택</text>
+  <text x="405" y="335" fill="#6b7280" font-family="Arial" font-size="18">A, B 또는 통합</text>
+  <text x="320" y="175" fill="#6b7280" font-family="Arial" font-size="32">↓</text>
+  <text x="570" y="175" fill="#6b7280" font-family="Arial" font-size="32">↓</text>
+</svg>
