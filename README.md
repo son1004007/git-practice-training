@@ -44,6 +44,7 @@
 | docs/15_GitHub_가입_안내.md | GitHub 가입 안내 |
 | docs/16_GitHub_초대메일_가입_흐름.md | 초대 메일 수락 및 저장소 접근 안내 |
 | docs/17_PAT_생성_방법.md | GitHub 인증값 생성 및 사용 안내 |
+| docs/18_GitHub_Organization_외부협업자_초대.md | Organization 특정 저장소의 외부 협업자 초대 및 권한 관리 |
 | docs/19_GitHub_가입_안내_메일_템플릿.md | 교육생 안내 메일 예시 |
 
 ## 기본 원칙
